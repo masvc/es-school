@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="E's SCHOOL"
+      content="架空のエンジニアスクール「E's SCHOOL」を体験できるシュミレーションゲームです。"
+    />
+    <title>E's SCHOOL</title>
+    <link rel="icon" href="../img/favicon.jpg" id="favicon" />
+    <link rel="stylesheet" href="../css/destyle.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/character.js"></script>
+    <script src="../js/status.js"></script>
+    <script src="../js/message.js"></script>
+    <script src="../js/chart.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/event.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/audio.js"></script>
+  </head>
+  <body>
+    <main id="eventback" class="eventback">
+      <header></header>
+
+      <section class="canvas">
+        <div class="talentbox">
+          <div class="item">
+            <div>
+              <div>
+                <img id="itemimg" class="itemimg" src="" alt="" />
+              </div>
+            </div>
+          </div>
+          <div id="talent" class="talent">
+            <img id="selecttalent" class="talentimg" src="" alt="" />
+          </div>
+        </div>
+
+        <div id="eventmsg" class="msg">
+          吹き出し。ここにメッセージが入る。。ボタンを押した時にここの部分にJSで関数からメッセージが入る感じ
+        </div>
+      </section>
+
+      <section class="eventnext">
+        <button id="nextbtn" class="nextbtn">
+          >> イベントを進める
+          <!-- WNが減っていくがgsfへの遷移がされていない。スコープの問題かと思ったが、ここが良くなかった・・・<a href="../html/main.html">>> イベントを進める</a> -->
+        </button>
+      </section>
+    </main>
+
+    <footer>&copy; E's SCHOOL</footer>
+    <audio id="audio" src="../audio/pi.mp3" preload="auto"></audio>
+  </body>
+</html>

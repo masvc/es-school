@@ -1,0 +1,399 @@
+* {
+  font-family: 筑紫B丸ゴシック;
+}
+
+body {
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  height: 600px;
+}
+
+button:hover {
+  color: white;
+  background-color: lightsalmon;
+}
+
+/* 背景をページごとに変更 mainに設定 */
+
+.index {
+  background-image: url(../img/event1/school1.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -10;
+}
+
+.eventback {
+  background-image: url(../img/event1/school2.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -10;
+}
+
+.gsf {
+  background-image: url(../img/gsf.png);
+  background-position: center;
+  background-size: cover;
+  z-index: -10;
+}
+
+.save {
+  background-color: lightslategray;
+}
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+  z-index: 100; /* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 25px;
+  border-radius: 3px;
+  background: white;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 100%;
+  left: 0%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background-color: lightslategray;
+  transition: 0.5s;
+  /* text-align: center;
+    display: flex;
+    justify-content: center; */
+  padding: 100px;
+  font-size: 30px;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_item {
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  bottom: 0; /* メニューを画面に入れる */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px 20px 20px;
+  z-index: 101;
+}
+
+.indexlogobox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 5px;
+}
+
+.indexlogo {
+  padding: 5px;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: gray 2.2px 2.2px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.indexlogospan {
+  font-size: 20px;
+  display: block;
+}
+
+.indexbtn {
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px 60px 10px;
+}
+
+.btna {
+  border: solid;
+  margin: 10px 20px;
+  padding: 10px;
+  height: 60px;
+  width: 120px;
+  border-radius: 10%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+}
+
+footer {
+  background-color: lightsalmon;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  color: white;
+}
+
+.savedata {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: 20px;
+}
+
+.saved {
+  padding: 10px;
+  border: solid;
+  margin: 20px 5px;
+}
+
+.loadbtn {
+  border: solid;
+  margin: 10px 5px;
+  padding: 10px;
+  height: 60px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.rebtn {
+  color: lightsalmon;
+  font-size: 12px;
+  border-bottom: lightsalmon dashed;
+  padding: 10px 10px 5px 10px;
+  margin: 0 5px;
+}
+
+.loadbtn:hover,
+.rebtn:hover {
+  background-color: lightsalmon;
+  color: white;
+  font-weight: bold;
+}
+
+.action {
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnb {
+  border: solid;
+  margin: 0 5px;
+  padding: 5px 10px;
+  height: 60px;
+  width: 120px;
+  border-radius: 10%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.talentbox {
+  display: flex;
+  justify-content: end;
+  margin: 60px 10px 30px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.selectbox {
+  display: flex;
+  justify-content: center;
+  margin: 60px 10px 30px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.escbox {
+  display: flex;
+  justify-content: center;
+  margin: 60px 10px 30px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.talent {
+  border-radius: 50%;
+  /* height: 200px;
+    width: 200px; */
+  margin: 5px 0;
+}
+
+.talentimg {
+  height: 200px;
+  padding: 5px 0;
+}
+
+.statustalentimg {
+  height: 100px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+.itemimg {
+  height: 100px;
+  padding: 0 30px;
+}
+
+.msg {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin: 10px;
+  border: solid;
+  font-weight: bold;
+}
+
+.msgend {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: black 3px 3px;
+}
+
+.eventnext {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nextbtn {
+  border: solid;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 10%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.status {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.statustext {
+  border: dotted;
+  padding: 5px;
+  font-size: 16px;
+  width: 180px;
+  margin: 0 5px;
+}
+
+.talentstatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.chart {
+  margin: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillchart {
+  background-color: white;
+  padding: 5px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.present {
+  height: 200px;
+  padding: 10px;
+}
+
+.specialmsg {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin: 10px;
+  border: solid;
+  font-weight: bold;
+}
+
+.specialbtn {
+  font-size: 18px;
+}
